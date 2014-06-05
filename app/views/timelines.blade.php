@@ -3,6 +3,6 @@
 
 @section('content')
 
-@include('layout.timeline.timeline_template')
+@include('layout.timelines.timelines_template')
 
 @stop

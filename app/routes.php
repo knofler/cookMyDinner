@@ -88,9 +88,9 @@ Route::get('/invoice',array(
 	'uses'	=>'AccessController@getInvoice'
 ));
 
-Route::get('/timeline',array(
-	'as'	=>'timeline',
-	'uses'	=>'AccessController@getTimeline'
+Route::get('/timelines',array(
+	'as'	=>'timelines',
+	'uses'	=>'AccessController@getTimelines'
 ));
 
 Route::get('/comment',array(

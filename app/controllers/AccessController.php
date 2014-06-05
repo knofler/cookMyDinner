@@ -7,9 +7,9 @@ class AccessController extends BaseController{
 	return View::make('eloquent')->with('bears',Bear::all());
 	}
 
-	public function getTimeline(){
+	public function getTimelines(){
 
-	return View::make('timeline');
+	return View::make('timelines');
 	}
 
 	public function getChat(){
