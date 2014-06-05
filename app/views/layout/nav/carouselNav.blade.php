@@ -20,7 +20,7 @@
                   <li><a href="{{URL::route('poll')}}">Poll</a></li>  
                   <li><a href="{{URL::route('shop')}}">Shop</a></li>
                   <li><a href="{{URL::route('blog')}}">Blog</a></li>
-                  <li><a href="{{URL::route('timeline')}}">Timeline</a></li>
+                  <li><a href="{{URL::route('timelines')}}">Timeline</a></li>
                   <li><a href="{{URL::route('comment')}}">Comment</a></li>
                   <li><a href="{{URL::route('comment_timeline')}}">Comment Timeline</a></li>
                   <li><a href="{{URL::route('chat')}}">Chat</a></li>
