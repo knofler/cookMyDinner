@@ -2,6 +2,12 @@
 
 return array(
 
+	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+	$host = $url["host"];
+	$username = $url["user"];
+	$password = $url["pass"];
+	$database = substr($url["path"], 1);
 	/*
 	|--------------------------------------------------------------------------
 	| PDO Fetch Style
@@ -52,16 +58,27 @@ return array(
 			'prefix'   => '',
 		),
 
-		'mysql' => array(
-			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'laravel',
-			'username'  => 'root',
-			'password'  => '',
-			'charset'   => 'utf8',
-			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
-		),
+		// 'mysql' => array(
+		// 	'driver'    => 'mysql',
+		// 	'host'      => 'localhost',
+		// 	'database'  => 'laravel',
+		// 	'username'  => 'root',
+		// 	'password'  => '',
+		// 	'charset'   => 'utf8',
+		// 	'collation' => 'utf8_unicode_ci',
+		// 	'prefix'    => '',
+		// ),
+
+		    'mysql' => array(
+        'driver'    => 'mysql',
+        'host'      => $host,
+        'database'  => $database,
+        'username'  => $username,
+        'password'  => $password,
+        'charset'   => 'utf8',
+        'collation' => 'utf8_unicode_ci',
+        'prefix'    => '',
+    ),
 
 		'pgsql' => array(
 			'driver'   => 'pgsql',
