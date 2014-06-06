@@ -28,7 +28,18 @@ class BearAppSeeder extends Seeder{
 		DB::table('picnics')->delete();
 		DB::table('trees')->delete();
 		DB::table('bears_picnics')->delete();
+		DB::table('foods')->delete();
 	
+
+	//seed our foods table...................
+
+	Food::create(array(
+		'food_name'=>'wagyu steak',
+		'food_type'=>'meat',
+		'food_genre'=>'protein',
+		'status'=>'cooking'
+	));	
+
 
 	// seed our bears table -----------------------
 	// we'll create three different bears
