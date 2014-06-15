@@ -8,7 +8,12 @@
                 <p>A snippet I recently used to display homes for a local brokerage.  Focused more on images when accessed through mobile</p>
               </div>
             </div>
-            
+            <?php
+                foreach (Food::all() as $eachFood){
+                    echo 'first item is : ', $eachFood->food_name ;
+                }
+
+            ?>
             <div class="row">
                 <div class="col-sm-6"> 
 

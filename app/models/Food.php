@@ -10,6 +10,10 @@
 
 	// DEFINE RELATIONSHIPS --------------------------------------------------
 
+	// each Food has many comments
+	public function comments(){
+		return $this->hasMany('Comment');
+	}
 
 	}
 
